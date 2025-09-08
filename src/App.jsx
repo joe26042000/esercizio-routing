@@ -15,7 +15,7 @@ function App() {
             element={<Index />}
           />
           <Route
-            path='/about/:id/:name'
+            path='/about/:id/'
             element={<About />}
           />
           <Route
