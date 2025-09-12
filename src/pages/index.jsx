@@ -5,6 +5,7 @@ import Grid from "@mui/material/Grid";
 import users from "../data/user.json";
 import Button from "@mui/material/Button";
 import Layout from "../components/layout";
+import CardFlip from "../components/cardflip";
 
 function Index() {
   const [pokemon, setPokemon] = useState([]);
@@ -12,7 +13,7 @@ function Index() {
   async function caricaPokemon() {
     console.log("caricaPokemon");
     const risultato = await fetch(
-      "https://pokeapi.co/api/v2/pokemon?limit=" + limit 
+      "https://pokeapi.co/api/v2/pokemon?limit=" + limit
     );
     const dati = await risultato.json();
     console.log(dati.results);
@@ -24,7 +25,7 @@ function Index() {
       <Grid container spacing={2}>
         <Grid size={12}>
           {" "}
-          <h1>welcome to index page</h1>
+          <h1>Catch 'em all!</h1>
           <input
             type="number"
             onChange={(e) => setLimit(e.target.value)}
@@ -36,6 +37,16 @@ function Index() {
         {pokemon.map((item, index) => {
           return (
             <Grid size={4}>
+              <CardFlip
+                id={index + 1}
+                name={item.name}
+                image={
+                  "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/" +
+                  (index + 1) +
+                  ".png"
+                }
+              />
+
               <CardMaterial
                 id={index + 1}
                 name={item.name}

@@ -6,7 +6,7 @@ function Layout(props) {
     <Container
       maxWidth={false}
       style={{
-        backgroundColor: "#00ff00",
+        backgroundColor: "rgb(210, 209, 217)",
         padding: 0,
         minHeight: "100vh",
         margin: 0,
@@ -15,10 +15,10 @@ function Layout(props) {
       <div
         style={{
           height: "100px",
-          backgroundColor: "#ff00ff",
+          backgroundColor: "rgba(68, 20, 82, 0.84)",
         }}
       >
-        <img src="https://toppng.com/uploads/preview/pokeball-11530983114udekdh4r4x.png"
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJDMt4gAFjTCFjaMybI3vAlgw82rkHjtyOUA&s"
         style={{
             height:"100px",
         }}>
@@ -33,7 +33,7 @@ function Layout(props) {
           left:0,
           right:0,
           height: "100px",
-          backgroundColor: "#ff00ff",
+          backgroundColor: "", /*tolto il footer*/
         }}
       ></div>
     </Container>

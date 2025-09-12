@@ -13,10 +13,11 @@ export default function ActionAreaCard(props) {
       <CardActionArea>
         <CardMedia
           component="img"
-          height="140"
+          height="100"
+          width=""
           image={props.image}
           style={{ objectFit:"contain"}}
-          alt="green iguana"
+          alt="pokemon"
 
         />
         <CardContent>
@@ -24,8 +25,7 @@ export default function ActionAreaCard(props) {
             {props.name}
           </Typography>
           <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-            Lizards are a widespread group of squamate reptiles, with over 6,000
-            species, ranging across all continents except Antarctica
+            Pokemon
           </Typography>
         </CardContent>
       </CardActionArea>

@@ -5,26 +5,31 @@ import Button from "@mui/material/Button";
 
 function About() {
   const params = useParams();
-  const [user, setUser] = useState();
+  const [pokemon, setPokemon] = useState();
+
+  async function fetchPokemon () {
+    const risultato=await fetch (
+      'https://pokeapi.co/api/v2/pokemon/'+ params.id
+    );
+    const data = await risultato.json();
+    console.log (data);
+    setPokemon (data);
+  }
 
   useEffect(() => {
-    const utenteTrovato = users.find((item) => item.id === Number(params.id));
-    console.log(utenteTrovato, "utente trovato");
-    setUser(utenteTrovato);
-  }, [params]);
+    fetchPokemon();
+  },[params.id])
 
   return (
     <div>
       <h1>
         welcome to about page : ID -- {params.id} <br />
-        NOME: {user?.name}
+        NOME: {pokemon?.name}
         <br />
-        EMAIL: {user?.email}
-        <br />
-        ETA: {user?.age}
-        <br />
-        CITTA: {user?.city}
-      </h1>
+        ALTEZZA: {pokemon?.height}
+        <br/>
+        PESO: {pokemon?.weight}
+     </h1> 
       
     </div>
   );

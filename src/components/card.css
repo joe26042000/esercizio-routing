@@ -1,23 +1,14 @@
 .title {
-    color: aquamarine;
+    color: rgb(181, 240, 220);
     font-size: 20px;
     margin: 0;
 }
 
 .card {
-    background-color: rgb(184, 94, 94);
+    background-color: rgb(0, 0, 0);
     border-radius: 40px;
     padding: 40px;
     margin: 40px;
     max-width: fit-content;
     cursor: pointer;
-}
-
-.id {
-    color: aquamarine;
-
-}
-
-.card:hover {
-    background-color: rgb(221, 133, 25);
 }
